@@ -1,15 +1,15 @@
 :root {
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
+  --bg-color: #7e98d4;
+  --card-bg: #a5cafc;
   --text-main: #f8fafc;
   --primary: #38bdf8;
-  --success: #10b981;
-  --danger: #ef4444;
-  --warning: #f59e0b;
+  --success: #63ce00;
+  --danger: #ec0707;
+  --warning: #ffa50a;
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   background-color: var(--bg-color);
   color: var(--text-main);
@@ -18,8 +18,8 @@ body {
 .main-header {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  border-bottom: 1px solid #334155;
+  background: linear-gradient(135deg, #6b9ff1 0%, #a7bcec 100%);
+  border-bottom: 1px solid #98bdf1;
 }
 
 .subtitle {
@@ -67,7 +67,7 @@ table {
 }
 
 th {
-  background: #334155;
+  background: #98c1fa;
   padding: 15px;
   text-align: left;
   font-size: 0.9rem;
@@ -77,14 +77,14 @@ th {
 
 td {
   padding: 15px;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid #98bff7;
 }
 
 .status-badge {
   padding: 4px 8px;
   border-radius: 12px;
   font-size: 0.75rem;
-  background: rgba(16, 185, 129, 0.2);
+  background: rgb(254, 255, 255);
   color: var(--success);
 }
 
@@ -106,7 +106,7 @@ td {
   max-width: 500px;
   border-radius: 16px;
   padding: 2rem;
-  border: 1px solid #475569;
+  border: 1px solid #ffffff;
 }
 
 .modal-header {
@@ -137,14 +137,14 @@ label {
   display: block;
   font-size: 0.85rem;
   margin-bottom: 5px;
-  color: #94a3b8;
+  color: #bed9ff;
 }
 
 input {
   width: 100%;
   padding: 10px;
   background: #0f172a;
-  border: 1px solid #334155;
+  border: 1px solid #629ae9;
   border-radius: 6px;
   color: white;
   box-sizing: border-box;
