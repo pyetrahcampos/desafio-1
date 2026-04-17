@@ -1,6 +1,6 @@
-const parkingForm = document.getElementById("parkingForm");
-const parkingData = document.getElementById("parkingData");
-const modal = document.getElementById("modalParking");
+const parkingForm = document.getElementById("EstacionamentoForm");
+const parkingData = document.getElementById("EstacionamentoData");
+const modal = document.getElementById("modalEstacionamento");
 const btnOpenModal = document.getElementById("btnOpenModal");
 const btnCloseModal = document.getElementById("btnCloseModal");
 const btnSubmit = document.getElementById("btnSubmit");
@@ -13,7 +13,7 @@ let editIndex = null;
 
 btnOpenModal.onclick = () => {
     isEditing = false;
-    parkingForm.reset();
+    EstacionamentoForm.reset();
     modalTitle.innerText = "Nova Reserva de Vaga";
     btnSubmit.innerText = "Confirmar Reserva";
     modal.style.display = "flex";
@@ -22,7 +22,7 @@ btnOpenModal.onclick = () => {
 btnCloseModal.onclick = () => modal.style.display = "none";
 
 
-parkingForm.onsubmit = (e) => {
+EstacionamentoForm.onsubmit = (e) => {
     e.preventDefault();
 
     const entry = {
@@ -60,7 +60,7 @@ parkingForm.onsubmit = (e) => {
 };
 
 function renderTable() {
-    parkingData.innerHTML = "";
+    EstacionamentoData.innerHTML = "";
     
     database.forEach((item, index) => {
         const row = document.createElement("tr");
@@ -72,11 +72,11 @@ function renderTable() {
             <td>${item.modelo} (${item.cor})</td>
             <td><span class="status-badge">Ocupada</span></td>
             <td>
-                <button onclick="prepareEdit(${index})" class="btn btn-warning">✏️</button>
-                <button onclick="removeItem(${index})" class="btn btn-danger">🗑️</button>
+                <button onclick="prepareEdit(${index})" class="btn btn-warning">editar</button>
+                <button onclick="removeItem(${index})" class="btn btn-danger">excluir</button>
             </td>
         `;
-        parkingData.appendChild(row);
+        EstacionamentoData.appendChild(row);
     });
 }
 
@@ -107,7 +107,7 @@ window.removeItem = (index) => {
 };
 
 function updateStorage() {
-    localStorage.setItem('parkflow_db', JSON.stringify(database));
+    localStorage.setItem('Estacionamento_db', JSON.stringify(database));
 }
 
 
